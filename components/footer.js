@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer () {
     return (
         <div className='footer p-[1cm] mt-[2cm]'>
@@ -11,9 +13,9 @@ export default function Footer () {
          <div className='grid-cols-1 text-center text-[#fff] m-[auto]'>
           <div>Follow us on social media</div>
           <div className='mt-[0.2cm]'>
-            <img src="images/linkedin.png" width="40" className='m-[0.2cm]' style={{display:"inline-block"}} />
-            <img src="images/twitter.png" width="40" className='m-[0.2cm]' style={{display:"inline-block"}} />
-            <img src="images/youtube.png" width="40" className='m-[0.2cm]' style={{display:"inline-block"}} />
+          <Link href="https://linkedin.com"><img src="images/linkedin.png" width="40" className='m-[0.2cm]' style={{display:"inline-block"}} /></Link>
+          <Link href="https://twitter.com"><img src="images/twitter.png" width="40" className='m-[0.2cm]' style={{display:"inline-block"}} /></Link>
+          <Link href="https://youtube.com"><img src="images/youtube.png" width="40" className='m-[0.2cm]' style={{display:"inline-block"}} /></Link>
             </div>
          </div>
         </div>

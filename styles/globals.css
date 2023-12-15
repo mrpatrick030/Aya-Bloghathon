@@ -17,3 +17,50 @@ body{background-color: #eee;}
 .footer{background-image: linear-gradient(45deg, #224, #422, #226, #422);}
 
 button{transition: 0.3s ease-in-out;}
+
+
+.custom-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(0,0,100,0.5); /* Semi-transparent background */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999; /* Ensure the loader appears on top of everything */
+  }
+  
+  .loader-spinner {
+    border: 4px solid #226;
+    border-top: 4px solid #ffffff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .menuitems{transition: 0.3s ease-in-out;}
+  .menuitems:hover{transform:scale3d(1.1,1.1,1.1)}
+
+  @media screen and (min-width:1007px) {
+    .membersregister, .memberslogin{background-size: 100%;}  
+  }
+
+  @media screen and (max-width:1007px) {
+    .membersregister, .memberslogin{background-position-x: 10%; background-position-y: 40%;}  
+  }
+
+  @media screen and (min-width:1007px) {
+    .adminregister, .adminlogin{background-size: 100%;}  
+  }
+
+  @media screen and (max-width:1007px) {
+    .adminregister, .adminlogin{background-position-x: 50%;}  
+  }

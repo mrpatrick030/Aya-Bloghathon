@@ -11,7 +11,73 @@ import Mainbar from '@/components/mainbar';
 
 
 export default function Single(){
+  const copyURL = () => {
+    navigator.clipboard.writeText(window.location.href)
+  }
+  const shareToLinkedIn = () => {
+    const urlToShare = encodeURIComponent(window.location.href);
+    const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${urlToShare}`;
+    window.open(linkedInShareUrl, '_blank');
+  };
+  const shareToTwitter = () => {
+    const urlToShare = encodeURIComponent(window.location.href);
+    const twitterShareUrl = `https://www.twitter.com/sharing/share-offsite/?url=${urlToShare}`;
+    window.open(twitterShareUrl, '_blank');
+  };
+  const shareToTelegram = () => {
+    const urlToShare = encodeURIComponent(window.location.href);
+    const telegramShareUrl = `https://www.telegram.org/sharing/share-offsite/?url=${urlToShare}`;
+    window.open(telegramShareUrl, '_blank');
+  };
+  const shareToYouTube = () => {
+    const urlToShare = encodeURIComponent(window.location.href);
+    const youtubeShareUrl = `https://www.youtube.com/sharing/share-offsite/?url=${urlToShare}`;
+    window.open(youtubeShareUrl, '_blank');
+  };
+
+         // confirm cookies to show single post
+         const [auth, setAuth] = useState(false);
+         const [image_link, setimage_link] = useState('');
+         const [video_link, setvideo_link] = useState('');
+         const [title, settitle] = useState('');
+         const [date, setdate] = useState('');
+         const [contributor, setcontributor] = useState('');
+         const [description, setdescription] = useState('');
+         const [category, setcategory] = useState('');
+     
+         axios.defaults.withCredentials = true;
+         const getBlogPostData = async () => {
+           await axios.get('/api/singlepostcookieconfirm')
+             .then((res) => {
+               console.log('Check Auth Response:', res); 
+               if (res.status === 200) {
+                 setAuth(true);
+                 setimage_link(res.data.singlepost.image_link);
+                 setvideo_link(res.data.singlepost.video_link);
+                 settitle(res.data.singlepost.title);
+                 setdate(res.data.singlepost.date);
+                 setcontributor(res.data.singlepost.contributor);
+                 setdescription(res.data.singlepost.description);
+                 setcategory(res.data.singlepost.category);
+               } else {
+                 setAuth(false);
+               }
+             })
+             .catch((err) => {
+               console.log('Check Auth Error:', err); 
+               setAuth(false);
+             });
+           }
+           useEffect(() => {
+            getBlogPostData();
+           }, [])
+
+           useEffect(() => {
+            AOS.init();
+            }, [])
+         
  
+    if (auth) {       
   return (
     <>
     <Head>
@@ -27,51 +93,34 @@ export default function Single(){
     </div>
 
 
-   <div className='lg:mx-[5%] px-[5%] pt-[1cm]'>
+   <div data-aos="fade-down" style={{transition:"0.5s ease-in-out"}} className='lg:mx-[5%] px-[5%] pt-[1cm]'>
    <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-8'>
 
-    <div className='grid-cols-1 lg:col-span-3 md:col-span-2 lg:ml-[5%]'>
+    <div className='grid-cols-1 lg:col-span-3 md:col-span-2 lg:ml-[5%] lg:pt-[1.2cm] md:pt-[1.2cm]'>
         <div className='bg-[#fff] p-[0.5cm] pb-[1.5cm] rounded-md mb-[1.5cm]' style={{boxShadow:"1px 1px 2px 2px #ccd"}}>
-        <div className='text-[150%] font-[600] text-[#446]'>The best way to build backlinks to your site with Page to Page</div>
+        <div className='text-[150%] font-[600] text-[#446]'>{title}</div>
         <div className='mt-[0.5cm]' style={{display:"block"}}>
         <div style={{display:"inline-block"}} ><img src="images/user.png" width="40" /></div>
         <div className='ml-[0.3cm]' style={{display:"inline-block"}}>
-        <div className='text-[90%] text-[#223] font-[500]'><span>Admin</span></div>
+        <div className='text-[90%] text-[#223] font-[500]'><span>{contributor}</span></div>
         <div style={{display:"block"}}>
         <img src="images/calendar.png" width="20" style={{display:"inline-block"}}/>
-        <div className='text-[85%] text-[#445] ml-[0.2cm]' style={{display:"inline-block"}}>December 7, 2023</div>
+        <div className='text-[85%] text-[#445] ml-[0.2cm]' style={{display:"inline-block"}}>{date}</div>
         </div>
         </div>
         </div>
-        <img src="images/woman.jpg" className='w-[100%] mt-[0.5cm]' />
-      <div className='text-[#445] mt-[1cm]'>
-      When you feel inspired and on top, you're motivated to do a great job. And it's hard not to be inspired by the rapid technological advances 
-      because these are very exciting times. We at Kerridge Commercial Systems (KCS) are passionate about utilising this modern technology to give
-       our customers the digital tools they need to grow their business profitably and deliver the excellent service they expect.
-       When you feel inspired and on top, you're motivated to do a great job. And it's hard not to be inspired by the rapid technological advances 
-      because these are very exciting times. We at Kerridge Commercial Systems (KCS) are passionate about utilising this modern technology to give
-       our customers the digital tools they need to grow their business profitably and deliver the excellent service they expect.
-       When you feel inspired and on top, you're motivated to do a great job. And it's hard not to be inspired by the rapid technological advances 
-      because these are very exciting times. We at Kerridge Commercial Systems (KCS) are passionate about utilising this modern technology to give
-       our customers the digital tools they need to grow their business profitably and deliver the excellent service they expect.
-       When you feel inspired and on top, you're motivated to do a great job. And it's hard not to be inspired by the rapid technological advances 
-      because these are very exciting times. We at Kerridge Commercial Systems (KCS) are passionate about utilising this modern technology to give
-       our customers the digital tools they need to grow their business profitably and deliver the excellent service they expect.
-      </div>
+        <img src={image_link} className='w-[100%] mt-[0.5cm]' />
+      <div className='text-[#445] mt-[1cm]'>{description}</div>
       <div className='mt-[0.5cm]'>
         <button className='px-[0.3cm] py-[0.1cm] bg-[#225] text-[80%] rounded-md text-[#fff] m-[0.2cm]' style={{boxShadow:"1px 1px 2px 2px #ccc"}}>Tags:</button>
-        <button className='px-[0.3cm] py-[0.1cm] bg-[#fff] text-[80%] rounded-md text-[#445] m-[0.2cm]' style={{boxShadow:"1px 1px 2px 2px #ccc"}}>blockchain</button>
-        <button className='px-[0.3cm] py-[0.1cm] bg-[#fff] text-[80%] rounded-md text-[#445] m-[0.2cm]' style={{boxShadow:"1px 1px 2px 2px #ccc"}}>ethereum</button>
+        <button className='px-[0.3cm] py-[0.1cm] bg-[#fff] text-[80%] rounded-md text-[#445] m-[0.2cm]' style={{boxShadow:"1px 1px 2px 2px #ccc"}}>{category}</button>
       </div>
       <div className='mt-[0.5cm]' style={{display:"block"}}>
-        <img src="images/share.png" width="30" className='m-[0.2cm]' style={{display:"inline-block"}} />
-        <img src="images/linkedin.png" width="30" className='m-[0.2cm]' style={{display:"inline-block"}} />
-        <img src="images/twitter.png" width="30" className='m-[0.2cm]' style={{display:"inline-block"}} />
-        <img src="images/telegram.png" width="30" className='m-[0.2cm]' style={{display:"inline-block"}} />
-        <img src="images/whatsapp.png" width="30" className='m-[0.2cm]' style={{display:"inline-block"}} />
-        <img src="images/facebook.png" width="30" className='m-[0.2cm]' style={{display:"inline-block"}} />
-        <img src="images/instagram.png" width="30" className='m-[0.2cm]' style={{display:"inline-block"}} />
-        <img src="images/youtube.png" width="30" className='m-[0.2cm]' style={{display:"inline-block"}} />
+        <img src="images/share.png" width="30" className='m-[0.2cm] cursor-pointer' onClick={(e) => copyURL()} style={{display:"inline-block"}} />
+        <img src="images/linkedin.png" width="30" className='m-[0.2cm] cursor-pointer' onClick={(e) => shareToLinkedIn(e)} style={{display:"inline-block"}} />
+        <img src="images/twitter.png" width="30" className='m-[0.2cm] cursor-pointer' onClick={(e) => shareToTwitter(e)}  style={{display:"inline-block"}} />
+        <img src="images/telegram.png" width="30" className='m-[0.2cm] cursor-pointer' onClick={(e) => shareToTelegram(e)}  style={{display:"inline-block"}} />
+        <img src="images/youtube.png" width="30" className='m-[0.2cm] cursor-pointer' onClick={(e) => shareToYouTube(e)}  style={{display:"inline-block"}} />
       </div>
     </div>
     </div>
@@ -86,6 +135,8 @@ export default function Single(){
    <Footer />
    </div>
   </>
-  );
+  );} else {
+    <div></div>
+  }
 };
 

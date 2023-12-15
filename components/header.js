@@ -17,17 +17,17 @@ export default function Header(){
   useEffect(() => {
     AOS.init();
   }, [])
+  
     return (
       <div>
 
       <div className='text-center py-[0.3cm] px-[1cm] bg-[#fff] headerdivforlarge' style={{boxShadow:"-1px 1px 1px 1px #ddf", zIndex:"9999"}}>
       <img src="images/logo2.png" width="50" style={{display:"inline-block"}}/>
-      <Link href="/"><span className='ml-[1cm]'>Home</span></Link>
-      <Link href="/contact"><span className='ml-[1cm]'>Contact</span></Link>
-      <Link href="/register"><span className='ml-[1cm]'>Become a contributor</span></Link>
-      <Link href="/login"><span className='ml-[1cm]'>login</span></Link>
-      <Link href="/adminlogin"><span className='ml-[1cm]'>Admin area</span></Link>
-      <span className='ml-[4cm] bg-[#ddf] px-[0.5cm] py-[0.2cm] rounded-full'><input type="search" placeholder="Search...." className='bg-[#ddf] w-[4cm] placeholder-[#300] text-[90%] outline-none' /><img src="images/search.png" width="20" className='ml-[0.2cm]' style={{display:"inline-block"}}/></span>
+      <Link href="/"><button className='ml-[1cm] menuitems'>Home</button></Link>
+      <Link href="/contact"><button className='ml-[1cm] menuitems'>Contact</button></Link>
+      <Link href="/register"><button className='ml-[1cm] menuitems'>Become a contributor</button></Link>
+      <Link href="/login"><button className='ml-[1cm] menuitems'>login</button></Link>
+      <Link href="/adminlogin"><button className='ml-[1cm] menuitems'>Admin area</button></Link>
       </div>
 
       <div className='w-[100%] headerdivforsmallandmedium' style={{position:"fixed", zIndex:"9999"}}>
@@ -41,17 +41,16 @@ export default function Header(){
       <div data-aos="flip-right" className='bg-[#fff] w-[80%] pb-[20%]'>
       <div className='py-[0.3cm] px-[0.2cm] text-right' style={{boxShadow:"-2px 2px 5px 2px #ccc", display:"block"}}><img src="images/arrow.png" width="40" onClick={(e) => changemenubehaviour2(e)} className='cursor-pointer' style={{display:"inline-block"}} /></div>
       <div className='px-[0.5cm]'>
-       <Link href="/" onClick={(e) => changemenubehaviour2(e)}><div className='py-[0.5cm]' style={{borderBottom:"1px solid #ddd"}}>Home</div></Link>
-       <Link href="/contact" onClick={(e) => changemenubehaviour2(e)}><div className='py-[0.5cm]' style={{borderBottom:"1px solid #ddd"}}>Contact</div></Link>
-       <Link href="/register" onClick={(e) => changemenubehaviour2(e)}><div className='py-[0.5cm]' style={{borderBottom:"1px solid #ddd"}}>Become a contributor</div></Link>
-       <Link href="/login" onClick={(e) => changemenubehaviour2(e)}><div className='py-[0.5cm]' style={{borderBottom:"1px solid #ddd"}}>login</div></Link>
-       <Link href="/adminlogin" onClick={(e) => changemenubehaviour2(e)}><div className='py-[0.5cm]' style={{borderBottom:"1px solid #ddd"}}>Admin area</div></Link>
-       <Link href="/"><div className='py-[0.8cm]'><span className='bg-[#ddf] px-[0.5cm] py-[0.3cm] rounded-full'><input type="search" placeholder="Search...." className='bg-[#ddf] w-[4cm] placeholder-[#300] text-[90%] outline-none' /><img src="images/search.png" width="20" className='ml-[0.2cm]' onClick={(e) => changemenubehaviour2(e)} style={{display:"inline-block"}}/></span></div></Link>
+       <Link href="/" onClick={(e) => changemenubehaviour2(e)}><div className='py-[0.5cm] menuitems' style={{borderBottom:"1px solid #ddd"}}>Home</div></Link>
+       <Link href="/contact" onClick={(e) => changemenubehaviour2(e)}><div className='py-[0.5cm] menuitems' style={{borderBottom:"1px solid #ddd"}}>Contact</div></Link>
+       <Link href="/register" onClick={(e) => changemenubehaviour2(e)}><div className='py-[0.5cm] menuitems' style={{borderBottom:"1px solid #ddd"}}>Become a contributor</div></Link>
+       <Link href="/login" onClick={(e) => changemenubehaviour2(e)}><div className='py-[0.5cm] menuitems' style={{borderBottom:"1px solid #ddd"}}>login</div></Link>
+       <Link href="/adminlogin" onClick={(e) => changemenubehaviour2(e)}><div className='py-[0.5cm] menuitems' style={{borderBottom:"1px solid #ddd"}}>Admin area</div></Link>
        <div className='mt-[4cm]' style={{display:"block"}}>
-       <Link href="/" onClick={(e) => changemenubehaviour2(e)}><img src="images/linkedin.png" width="30" style={{display:"inline-block"}}/></Link>
-       <Link href="/" onClick={(e) => changemenubehaviour2(e)}><img src="images/twitter.png" width="30" className='ml-[0.5cm]' style={{display:"inline-block"}}/></Link>
-       <Link href="/" onClick={(e) => changemenubehaviour2(e)}><img src="images/youtube.png" width="30" className='ml-[0.5cm]' style={{display:"inline-block"}}/></Link>
-       <Link href="/" onClick={(e) => changemenubehaviour2(e)}><img src="images/telegram.png" width="30" className='ml-[0.5cm]' style={{display:"inline-block"}}/></Link>
+       <Link href="https://linkedin.com" onClick={(e) => changemenubehaviour2(e)}><img src="images/linkedin.png" width="30" style={{display:"inline-block"}}/></Link>
+       <Link href="https://twitter.com" onClick={(e) => changemenubehaviour2(e)}><img src="images/twitter.png" width="30" className='ml-[0.5cm]' style={{display:"inline-block"}}/></Link>
+       <Link href="https://youtube.com" onClick={(e) => changemenubehaviour2(e)}><img src="images/youtube.png" width="30" className='ml-[0.5cm]' style={{display:"inline-block"}}/></Link>
+       <Link href="https://telegram.org" onClick={(e) => changemenubehaviour2(e)}><img src="images/telegram.png" width="30" className='ml-[0.5cm]' style={{display:"inline-block"}}/></Link>
        </div>
       </div>
       </div>

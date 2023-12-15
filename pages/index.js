@@ -9,7 +9,6 @@ import Footer from '@/components/footer';
 import Sidebar from '@/components/sidebar';
 import Mainbar from '@/components/mainbar';
 
-
 export default function Home(){
  
   return (
