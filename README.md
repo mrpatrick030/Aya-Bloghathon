@@ -1,8 +1,8 @@
-**About the Informatio Blog**  [Blog Link](https://informatioblog.vercel.app)
+# About the Informatio Blog  [Blog Link](https://informatioblog.vercel.app)
 
 Making Web 3 accessible to everyone on the internet. Informatio is open to everyone, every individual as you can become a member and contribute your insights about web 3 to the blog. To become a contributor, you will have to register with us via the members registration page and login with your correct credentials. The login page takes you to your contributor's dashboard with which you can make your blog contribution. Your post will be made public upon approval by the site's admin.
 
-**Purpose of Informatio**
+## Purpose of Informatio
 Our mission is to make web 3 accessible to everyone. We give insights about the blockchain and every other topic related to the blockchain. We post an article on our blog after careful review by the site's admin. Our blog is not an admin only blog (members can also post meaningful contents but with the admin's approval).
 
 ## Key Features of Informatio
