@@ -1,6 +1,6 @@
 # About the Informatio Blog  [Blog Link](https://informatioblog.vercel.app)
 
-Making Web 3 accessible to everyone on the internet. Informatio is open to everyone, every individual as you can become a member and contribute your insights about web 3 to the blog. To become a contributor, you will have to register with us via the members registration page and login with your correct credentials. The login page takes you to your contributor's dashboard with which you can make your blog contribution. Your post will be made public upon approval by the site's admin.
+Making Web 3 accessible to everyone on the internet. Informatio is open to every individual as you can become a member and contribute your thoughts about web 3 to the blog. To become a contributor, you will have to register with us via the members registration page and login with your correct credentials. The login page takes you to your contributor's dashboard with which you can make your blog contribution. Your post will be made public upon approval by the site's admin.
 
 ## Purpose of Informatio
 Our mission is to make web 3 accessible to everyone. We give insights about the blockchain and every other topic related to the blockchain. We post an article on our blog after careful review by the site's admin. Our blog is not an admin only blog (members can also post meaningful contents but with the admin's approval).
@@ -9,7 +9,7 @@ Our mission is to make web 3 accessible to everyone. We give insights about the 
 A general blog page, single post page, admin dashboard, admin registration page, admin login page, contributor's dashboard, contributors's registration page, contributor's login page, contact form, search form, mobile responsive menu, responsive website across all devices, intuitive interface.
 
 ### Technologies used
-Next.js, PostgreSQL, Tailwind CSS, JavaScript, Node.js, Axios, Nodemailer, AOS, Pinata Cloud App. Note that Informatio was built from scratch using these technologies. 
+Next.js, PostgreSQL, Tailwind CSS, JavaScript, Node.js, Axios, Nodemailer, AOS, Pinata Cloud Storage. Note that Informatio was built from scratch using these technologies. 
 
 ## General Blog Page
 The general blog page is the first page of the blog. It is a two column page which consists of a main bar and a sidebar. It shows all posts submitted by the admin and all approved posts of members or contributors. It shows the following properties of a blog post: image, video, title, description (excerpt), date of post, name of contributor, category of post and the post id(post id can be seen by only the admin when logged in).
