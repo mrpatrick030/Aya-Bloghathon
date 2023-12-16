@@ -87,9 +87,20 @@ export default function Mainbar () {
       handleSearch();
       }, []);
 
+      // pagination
+      const [currentPage, setCurrentPage] = useState(1);
+      const postsPerPage = 10;
+      const indexOfLastPost = currentPage * postsPerPage;
+      const indexOfFirstPost = indexOfLastPost - postsPerPage;
+      const currentPosts = approvedPosts.slice(indexOfFirstPost, indexOfLastPost);
+      const searchPosts = searchResults.slice(indexOfFirstPost, indexOfLastPost);
+      const paginate = (pageNumber) => {
+      setCurrentPage(pageNumber);
+      };
 
     return (
         <div>
+
           <div className='pb-[0.5cm]' style={{position:"sticky"}}>
           <span className='bg-[#fff] px-[0.5cm] py-[0.2cm] rounded-full'>
         <form style={{display:"inline-block"}}>
@@ -97,7 +108,8 @@ export default function Mainbar () {
         </form>
         </span>
           </div>
-      {searchResults.length > 0 ? searchResults.map((posts) => (
+
+      {searchResults.length > 0 ? searchPosts.map((posts) => (
       <div data-aos="slide-up" key={posts.id} className='bg-[#fff] p-[0.5cm] pb-[1.5cm] rounded-md mb-[1.5cm]' style={{boxShadow:"1px 1px 2px 2px #ddd", transition:"0.5s ease-in-out"}}>
       <div className='grid lg:grid-cols-3 grid-cols-1 gap-8'>
         <div className='grid-cols-1'>
@@ -133,7 +145,7 @@ export default function Mainbar () {
     </div>
     ))
        :   
-      approvedPosts.map((posts) => (
+       currentPosts.map((posts) => (
       <div data-aos="slide-up" key={posts.id} className='bg-[#fff] p-[0.5cm] pb-[1.5cm] rounded-md mb-[1.5cm]' style={{boxShadow:"1px 1px 2px 2px #ddd", transition:"0.5s ease-in-out"}}>
       <div className='grid lg:grid-cols-3 grid-cols-1 gap-8'>
         <div className='grid-cols-1'>
@@ -168,6 +180,14 @@ export default function Mainbar () {
       </div>
     </div>
     ))}
+
+    <div>
+        {Array.from({ length: Math.ceil(approvedPosts.length / postsPerPage) }, (_, index) => (
+          <button className='bg-[#225] rounded-md px-[0.3cm] py-[0.1cm] mx-[0.2cm] text-[#fff]' key={index} onClick={() => paginate(index + 1)}>
+            {index + 1}
+          </button>
+        ))}
+      </div>
 
 
       {loading ? (
