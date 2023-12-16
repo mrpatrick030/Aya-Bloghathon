@@ -80,7 +80,7 @@ export default function Contact(){
    <link rel="shortcut icon" href="/favicon.ico" />
    </Head>
    <div style={{backgroundImage:"url(images/laptopchair.jpg)", backgroundPositionX:"50%", backgroundPositionY:"5%"}}>
-    <div className='py-[0.3cm] px-[1cm] bg-[#fff]' style={{boxShadow:"-1px 1px 1px 1px #ddf", zIndex:"9999"}}>
+    <div className='py-[0.3cm] px-[1cm] bg-[#fff]' style={{boxShadow:"-1px 1px 1px 1px #ddd", zIndex:"9999"}}>
      <Link href="/">
       <img src="images/back.png" width="50" style={{display:"inline-block"}}/>
       <span className='ml-[0.5cm] lg:text-[180%] md:text-[180%] text-[150%] font-[500] text-[#446]'>Back</span>

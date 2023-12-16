@@ -98,7 +98,7 @@ export default function Mainbar () {
         </span>
           </div>
       {searchResults.length > 0 ? searchResults.map((posts) => (
-      <div data-aos="slide-up" key={posts.id} className='bg-[#fff] p-[0.5cm] pb-[1.5cm] rounded-md mb-[1.5cm]' style={{boxShadow:"1px 1px 2px 2px #dde", transition:"0.5s ease-in-out"}}>
+      <div data-aos="slide-up" key={posts.id} className='bg-[#fff] p-[0.5cm] pb-[1.5cm] rounded-md mb-[1.5cm]' style={{boxShadow:"1px 1px 2px 2px #ddd", transition:"0.5s ease-in-out"}}>
       <div className='grid lg:grid-cols-3 grid-cols-1 gap-8'>
         <div className='grid-cols-1'>
         <img src={posts.image_link} className='rounded-md max-h-[7cm] w-[100%]' />
@@ -132,7 +132,7 @@ export default function Mainbar () {
     ))
        :   
       approvedPosts.map((posts) => (
-      <div data-aos="slide-up" key={posts.id} className='bg-[#fff] p-[0.5cm] pb-[1.5cm] rounded-md mb-[1.5cm]' style={{boxShadow:"1px 1px 2px 2px #dde", transition:"0.5s ease-in-out"}}>
+      <div data-aos="slide-up" key={posts.id} className='bg-[#fff] p-[0.5cm] pb-[1.5cm] rounded-md mb-[1.5cm]' style={{boxShadow:"1px 1px 2px 2px #ddd", transition:"0.5s ease-in-out"}}>
       <div className='grid lg:grid-cols-3 grid-cols-1 gap-8'>
         <div className='grid-cols-1'>
         <img src={posts.image_link} className='rounded-md max-h-[7cm] w-[100%]' />

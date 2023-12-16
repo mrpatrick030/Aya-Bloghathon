@@ -85,7 +85,7 @@ export default function Single(){
    <link rel="shortcut icon" href="/favicon.ico" />
    </Head>
    <div>
-    <div className='py-[0.3cm] px-[1cm] bg-[#fff]' style={{boxShadow:"-1px 1px 1px 1px #dde", zIndex:"9999"}}>
+    <div className='py-[0.3cm] px-[1cm] bg-[#fff]' style={{boxShadow:"-1px 1px 1px 1px #ddd", zIndex:"9999"}}>
      <Link href="/">
       <img src="images/back.png" width="50" style={{display:"inline-block"}}/>
       <span className='ml-[0.5cm] lg:text-[180%] md:text-[180%] text-[150%] font-[500] text-[#446]'>Back</span>
@@ -97,7 +97,7 @@ export default function Single(){
    <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-8'>
 
     <div className='grid-cols-1 lg:col-span-3 md:col-span-2 lg:ml-[5%] lg:pt-[1.2cm] md:pt-[1.2cm]'>
-        <div className='bg-[#fff] p-[0.5cm] pb-[1.5cm] rounded-md mb-[1.5cm]' style={{boxShadow:"1px 1px 2px 2px #dde"}}>
+        <div className='bg-[#fff] p-[0.5cm] pb-[1.5cm] rounded-md mb-[1.5cm]' style={{boxShadow:"1px 1px 2px 2px #ddd"}}>
         <div className='text-[150%] font-[600] text-[#446]'>{title}</div>
         <div className='mt-[0.5cm]' style={{display:"block"}}>
         <div style={{display:"inline-block"}} ><img src="images/user.png" width="40" /></div>
