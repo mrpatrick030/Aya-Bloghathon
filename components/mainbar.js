@@ -101,7 +101,7 @@ export default function Mainbar () {
       <div data-aos="slide-up" key={posts.id} className='bg-[#fff] p-[0.5cm] pb-[1.5cm] rounded-md mb-[1.5cm]' style={{boxShadow:"1px 1px 2px 2px #ddd", transition:"0.5s ease-in-out"}}>
       <div className='grid lg:grid-cols-3 grid-cols-1 gap-8'>
         <div className='grid-cols-1'>
-        <img src={posts.image_link} className='rounded-md max-h-[8cm] w-[100%]' />
+        <img src={posts.image_link} className='rounded-md lg:max-h-[8cm] w-[100%]' />
         </div>
         <div className='grid-cols-1 lg:col-span-2'>
         <div className='text-[150%] font-[600] text-[#446]'>
@@ -126,7 +126,7 @@ export default function Mainbar () {
         <button className='px-[0.3cm] py-[0.1cm] bg-[#fff] text-[80%] rounded-md text-[#445] cursor-default' style={{boxShadow:"1px 1px 2px 2px #ccc"}}>{posts.category}</button>
       </div>
       <div className='mt-[1cm]' style={{position:"absolute"}}>
-      <button onClick={() => handleSubmitforSendingSinglePostid(posts.id)} className='px-[0.5cm] py-[0.2cm] bg-[#225] text-[#fff] text-[80%] text-[#445] rounded-tr-full'>Continue Reading</button>
+      <button onClick={() => handleSubmitforSendingSinglePostid(posts.id)} className='generalbutton px-[0.5cm] py-[0.2cm] bg-[#225] text-[#fff] text-[80%] text-[#445] rounded-tr-full'>Continue Reading</button>
       </div>
     </div>
     ))
@@ -135,7 +135,7 @@ export default function Mainbar () {
       <div data-aos="slide-up" key={posts.id} className='bg-[#fff] p-[0.5cm] pb-[1.5cm] rounded-md mb-[1.5cm]' style={{boxShadow:"1px 1px 2px 2px #ddd", transition:"0.5s ease-in-out"}}>
       <div className='grid lg:grid-cols-3 grid-cols-1 gap-8'>
         <div className='grid-cols-1'>
-        <img src={posts.image_link} className='rounded-md max-h-[8cm] w-[100%]' />
+        <img src={posts.image_link} className='rounded-md lg:max-h-[8cm] w-[100%]' />
         </div>
         <div className='grid-cols-1 lg:col-span-2'>
         <div className='text-[150%] font-[600] text-[#446]'>
@@ -160,7 +160,7 @@ export default function Mainbar () {
         <button className='px-[0.3cm] py-[0.1cm] bg-[#fff] text-[80%] rounded-md text-[#445] cursor-default' style={{boxShadow:"1px 1px 2px 2px #ccc"}}>{posts.category}</button>
       </div>
       <div className='mt-[1cm]' style={{position:"absolute"}}>
-      <button onClick={() => handleSubmitforSendingSinglePostid(posts.id)} className='px-[0.5cm] py-[0.2cm] bg-[#225] text-[#fff] text-[80%] text-[#445] rounded-tr-full'>Continue Reading</button>
+      <button onClick={() => handleSubmitforSendingSinglePostid(posts.id)} className='generalbutton px-[0.5cm] py-[0.2cm] bg-[#225] text-[#fff] text-[80%] text-[#445] rounded-tr-full'>Continue Reading</button>
       </div>
     </div>
     ))}

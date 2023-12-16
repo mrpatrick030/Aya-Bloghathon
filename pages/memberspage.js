@@ -129,7 +129,7 @@ export default function ContributorsDashboard(){
             <input type="date" className='px-[0.2cm] py-[0.3cm] bg-[#fff] outline-[#224] w-[100%] placeholder-[#555] mb-[0.5cm]' style={{border:"2px solid #ccf"}} required id="date" name="date" value={values.date} onChange={handleInput} placeholder="Type the date of your post" />
             <input type="text" className='px-[0.2cm] py-[0.3cm] bg-[#fff] outline-[#224] w-[100%] placeholder-[#555] mb-[0.5cm]' style={{border:"2px solid #ccf"}} required id="category" name="category" value={values.category} onChange={handleInput} placeholder="Choose a category for your post" />
             <textarea className='px-[0.2cm] py-[0.3cm] h-[5cm] bg-[#fff] outline-[#224] w-[100%] placeholder-[#555] mb-[0.5cm]' style={{border:"2px solid #ccf"}} required id="description" name="description" value={values.description} onChange={handleInput} placeholder="Give your post a description" />
-            <button type="submit" className='px-[0.2cm] py-[0.3cm] rounded-md bg-[#225] w-[100%] text-[110%] font-[500] text-[#fff] mb-[0.5cm] text-center'>Add blog post</button>
+            <button type="submit" className='generalbutton px-[0.2cm] py-[0.3cm] rounded-md bg-[#225] w-[100%] text-[110%] font-[500] text-[#fff] mb-[0.5cm] text-center'>Add blog post</button>
             </form>     
         </div>
         </div>

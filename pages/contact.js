@@ -103,7 +103,7 @@ export default function Contact(){
             <input type="email" id="email" name="email" value={values.email} required onChange={handleInput} className='px-[0.2cm] py-[0.3cm] bg-[#fff] outline-[#224] w-[100%] placeholder-[#555] mb-[0.5cm]' style={{border:"2px solid #ccf"}} placeholder="Type your email" />
             <input type="text" id="phone" name="phone" value={values.phone} onChange={handleInput} className='px-[0.2cm] py-[0.3cm] bg-[#fff] outline-[#224] w-[100%] placeholder-[#555] mb-[0.5cm]' style={{border:"2px solid #ccf"}} placeholder="Type your phone number (optional)" />
             <textarea id="message" name="message" value={values.message} required onChange={handleInput} className='px-[0.2cm] py-[0.3cm] h-[5cm] bg-[#fff] outline-[#224] w-[100%] placeholder-[#555] mb-[0.5cm]' style={{border:"2px solid #ccf"}} placeholder="Type your message here" />
-            <button type="submit" className='px-[0.2cm] py-[0.3cm] rounded-md bg-[#225] w-[100%] text-[110%] font-[500] text-[#fff] mb-[0.5cm] text-center'>Send message</button>
+            <button type="submit" className='generalbutton px-[0.2cm] py-[0.3cm] rounded-md bg-[#225] w-[100%] text-[110%] font-[500] text-[#fff] mb-[0.5cm] text-center'>Send message</button>
             {form.state === 'loading' ? (
 					<div><span className="text-[#ccc] lg:text-[120%]" style={{animationDuration:"3s"}}>Sending......</span></div>
 				) : form.state === 'error' ? (

@@ -305,7 +305,7 @@ export default function AdminDashboard(){
             <input type="date" className='px-[0.2cm] py-[0.3cm] bg-[#fff] outline-[#224] w-[100%] placeholder-[#555] mb-[0.5cm]' style={{border:"2px solid #ccf"}} required id="date" name="date" value={values.date} onChange={handleInput} placeholder="Type the date of your post" />
             <input type="text" className='px-[0.2cm] py-[0.3cm] bg-[#fff] outline-[#224] w-[100%] placeholder-[#555] mb-[0.5cm]' style={{border:"2px solid #ccf"}} required id="category" name="category" value={values.category} onChange={handleInput} placeholder="Choose a category for your post" />
             <textarea className='px-[0.2cm] py-[0.3cm] h-[5cm] bg-[#fff] outline-[#224] w-[100%] placeholder-[#555] mb-[0.5cm]' style={{border:"2px solid #ccf"}} required id="description" name="description" value={values.description} onChange={handleInput} placeholder="Give your post a description" />
-            <button type="submit" className='px-[0.2cm] py-[0.3cm] rounded-md bg-[#225] w-[100%] text-[110%] font-[500] text-[#fff] mb-[0.5cm] text-center'>Add blog post</button>
+            <button type="submit" className='generalbutton px-[0.2cm] py-[0.3cm] rounded-md bg-[#225] w-[100%] text-[110%] font-[500] text-[#fff] mb-[0.5cm] text-center'>Add blog post</button>
             </form>
            }
 
@@ -318,14 +318,14 @@ export default function AdminDashboard(){
             <input type="date" className='px-[0.2cm] py-[0.3cm] bg-[#fff] outline-[#224] w-[100%] placeholder-[#555] mb-[0.5cm]' style={{border:"2px solid #ccf"}} id="date" name="date" value={values.date} onChange={handleInput} placeholder="Update the date of your post" />
             <input type="text" className='px-[0.2cm] py-[0.3cm] bg-[#fff] outline-[#224] w-[100%] placeholder-[#555] mb-[0.5cm]' style={{border:"2px solid #ccf"}} id="category" name="category" value={values.category} onChange={handleInput} placeholder="Update post category" />
             <textarea className='px-[0.2cm] py-[0.3cm] h-[5cm] bg-[#fff] outline-[#224] w-[100%] placeholder-[#555] mb-[0.5cm]' style={{border:"2px solid #ccf"}} id="description" name="description" value={values.description} onChange={handleInput} placeholder="Update post description" />
-            <button type="submit" className='px-[0.2cm] py-[0.3cm] rounded-md bg-[#225] w-[100%] text-[110%] font-[500] text-[#fff] mb-[0.5cm] text-center'>Update blog post</button>
+            <button type="submit" className='generalbutton px-[0.2cm] py-[0.3cm] rounded-md bg-[#225] w-[100%] text-[110%] font-[500] text-[#fff] mb-[0.5cm] text-center'>Update blog post</button>
             </form>
            }
 
            {displayComponent === "deletePostDisplayComponent" &&
             <form onSubmit={(e) => handleSubmitforDeletingBlogPost(e)} data-aos="fade-in" style={{transition:"0.5s ease-in-out"}}>
             <input type="number" className='px-[0.2cm] py-[0.3cm] bg-[#fff] outline-[#224] w-[100%] placeholder-[#555] mb-[0.5cm]' style={{border:"2px solid #ccf"}} required id="id" name="id" value={values.id} onChange={handleInput} placeholder="Input id of post to delete" />
-            <button type="submit" className='px-[0.2cm] py-[0.3cm] rounded-md bg-[#500] w-[100%] text-[110%] font-[500] text-[#fff] mb-[0.5cm] text-center'>Delete blog post</button>
+            <button type="submit" className='deletebutton px-[0.2cm] py-[0.3cm] rounded-md bg-[#500] w-[100%] text-[110%] font-[500] text-[#fff] mb-[0.5cm] text-center'>Delete blog post</button>
             </form>
            }
 
@@ -372,7 +372,7 @@ export default function AdminDashboard(){
            {displayComponent === "approveContributorsPostDisplayComponent" &&
             <form onSubmit={(e) => handleSubmitforApprovingBlogPost(e)} data-aos="fade-in" style={{transition:"0.5s ease-in-out"}}>
             <input type="number" className='px-[0.2cm] py-[0.3cm] bg-[#fff] outline-[#224] w-[100%] placeholder-[#555] mb-[0.5cm]' required id="id" name="id" value={values.id} onChange={handleInput} style={{border:"2px solid #ccf"}} placeholder="Input id of post to approve" />
-            <button type="submit" className='px-[0.2cm] py-[0.3cm] rounded-md bg-[#030] w-[100%] text-[110%] font-[500] text-[#fff] mb-[0.5cm] text-center'>Approve Contributor's post</button>
+            <button type="submit" className='approvebutton px-[0.2cm] py-[0.3cm] rounded-md bg-[#030] w-[100%] text-[110%] font-[500] text-[#fff] mb-[0.5cm] text-center'>Approve Contributor's post</button>
             </form>
            }
         </div>

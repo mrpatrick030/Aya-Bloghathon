@@ -67,7 +67,7 @@ const handleSubmitforMemberLogin = async (e) => {
             <form onSubmit={(e) => handleSubmitforMemberLogin(e)}>
             <input type="email" className='px-[0.2cm] py-[0.3cm] bg-[#fff] outline-[#224] w-[100%] placeholder-[#555] mb-[0.5cm] rounded-tr-full' id="email" name="email" value={values.email} onChange={handleInput} style={{border:"2px solid #ccf"}} placeholder="Input your email" />
             <input type="password" className='px-[0.2cm] py-[0.3cm] bg-[#fff] outline-[#224] w-[100%] placeholder-[#555] mb-[0.5cm] rounded-tr-full' id="password" name="password" value={values.password} onChange={handleInput} style={{border:"2px solid #ccf"}} placeholder="Input your password" />
-            <button type="submit" className='px-[0.2cm] py-[0.3cm] rounded-md bg-[#225] w-[100%] text-[110%] font-[500] text-[#fff] mb-[0.5cm] text-center rounded-bl-full'>Login to Informatio</button>
+            <button type="submit" className='generalbutton px-[0.2cm] py-[0.3cm] rounded-md bg-[#225] w-[100%] text-[110%] font-[500] text-[#fff] mb-[0.5cm] text-center rounded-bl-full'>Login to Informatio</button>
             </form>
             <div className='text-[110%] text-[#fff]'><span>Not yet a contributor?</span> <span className='text-[#d7b644] ml-[0.3cm] font-[500]'><Link href="/register">Register</Link></span></div>
         </div>

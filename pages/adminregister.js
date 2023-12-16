@@ -79,7 +79,7 @@ const handleSubmitforAdminRegister = async (e) => {
             <span><span>Male</span><input type="radio" id="malegender" name="gender" value="male" onChange={handleInput} className='ml-[0.3cm]' /></span>
             <span className='ml-[1cm]'><span>Female</span><input type="radio" id="femalegender" name="gender" value="female" onChange={handleInput} className='ml-[0.3cm]' /></span>
             </div>
-            <button type="submit" className='px-[0.2cm] py-[0.3cm] rounded-md bg-[#225] w-[100%] text-[110%] font-[500] text-[#fff] mb-[0.5cm] text-center'>Become an admin</button>
+            <button type="submit" className='generalbutton px-[0.2cm] py-[0.3cm] rounded-md bg-[#225] w-[100%] text-[110%] font-[500] text-[#fff] mb-[0.5cm] text-center'>Become an admin</button>
           </form>
         </div>
         </div>

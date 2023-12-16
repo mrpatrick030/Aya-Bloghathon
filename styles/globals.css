@@ -64,3 +64,12 @@ button{transition: 0.3s ease-in-out;}
   @media screen and (max-width:1007px) {
     .adminregister, .adminlogin{background-position-x: 60%;}  
   }
+
+  .generalbutton{transition: 0.3s ease-in-out;}
+  .generalbutton:hover{background-color: #227;}
+
+  .deletebutton{transition: 0.3s ease-in-out;}
+  .deletebutton:hover{background-color: #800;}
+
+  .approvebutton{transition: 0.3s ease-in-out;}
+  .approvebutton:hover{background-color: #050;}
