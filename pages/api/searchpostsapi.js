@@ -6,14 +6,15 @@ export default async function handler(req, res) {
     const searchTerm = `%${query}%`;
 
     const searchQuery =
-      'SELECT * FROM informatioblog WHERE contributor ILIKE $1 OR title ILIKE $2 OR description ILIKE $3 OR category ILIKE $4 ORDER by id DESC';
+      'SELECT * FROM informatioblog WHERE status=$1 AND (contributor ILIKE $2 OR title ILIKE $3 OR description ILIKE $4 OR category ILIKE $5) ORDER BY id DESC';
+    const values = ['approved', searchTerm, searchTerm, searchTerm, searchTerm];
 
     // Use sql.query() and directly destructure the data property
-    const data = await sql.query(searchQuery, [searchTerm, searchTerm, searchTerm, searchTerm]);
+    const data = await sql.query(searchQuery, values);
 
     if (data.rows.length > 0) {
       res.status(200).json(data.rows);
-      console.log(data.rows)
+      console.log(data.rows);
     } else {
       res.status(404).json({ message: 'No results found' });
     }
