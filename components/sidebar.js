@@ -69,10 +69,12 @@ export default function Sidebar () {
         <img src="images/minus2.png" width="50" className='ml-[0.3cm]' style={{display:"inline-block"}} />
         </div>
         <div className='mt-[0.5cm]'>
-          {approvedPosts .map((posts) => ( 
+          {approvedPosts.map((posts) => ( 
          <div className='grid grid-cols-3 gap-4 mb-[0.8cm]'>
           <div className='grid-cols-1'>
-           <img src={posts.image_link} className='w-[100%] rounded-md' />
+            {posts.image_link ? (<img src={posts.image_link} className='rounded-md w-[100%]' />) : 
+            (<video src={posts.video_link}  control="controls" className='rounded-md w-[100%]' />)
+            }
           </div>
           <div className='grid-cols-1 col-span-2'>
           <button className='px-[0.3cm] py-[0.05cm] bg-[#fff] text-[80%] rounded-md text-[#445] mb-[0.2cm] cursor-default' style={{boxShadow:"1px 1px 2px 2px #ccc"}}>{posts.category}</button>

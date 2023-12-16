@@ -101,7 +101,9 @@ export default function Mainbar () {
       <div data-aos="slide-up" key={posts.id} className='bg-[#fff] p-[0.5cm] pb-[1.5cm] rounded-md mb-[1.5cm]' style={{boxShadow:"1px 1px 2px 2px #ddd", transition:"0.5s ease-in-out"}}>
       <div className='grid lg:grid-cols-3 grid-cols-1 gap-8'>
         <div className='grid-cols-1'>
-        <img src={posts.image_link} className='rounded-md lg:max-h-[8cm] w-[100%]' />
+        {posts.image_link ? (<img src={posts.image_link} className='rounded-md lg:max-h-[8cm] w-[100%]' />) : 
+        (<video src={posts.video_link}  control="controls" className='rounded-md lg:max-h-[10cm] w-[100%]' />)
+        }
         </div>
         <div className='grid-cols-1 lg:col-span-2'>
         <div className='text-[150%] font-[600] text-[#446]'>
@@ -135,7 +137,9 @@ export default function Mainbar () {
       <div data-aos="slide-up" key={posts.id} className='bg-[#fff] p-[0.5cm] pb-[1.5cm] rounded-md mb-[1.5cm]' style={{boxShadow:"1px 1px 2px 2px #ddd", transition:"0.5s ease-in-out"}}>
       <div className='grid lg:grid-cols-3 grid-cols-1 gap-8'>
         <div className='grid-cols-1'>
-        <img src={posts.image_link} className='rounded-md lg:max-h-[8cm] w-[100%]' />
+       {posts.image_link ? (<img src={posts.image_link} className='rounded-md lg:max-h-[8cm] w-[100%]' />) : 
+        (<video src={posts.video_link}  control="controls" className='rounded-md lg:max-h-[10cm] w-[100%]' />)
+        }
         </div>
         <div className='grid-cols-1 lg:col-span-2'>
         <div className='text-[150%] font-[600] text-[#446]'>

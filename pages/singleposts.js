@@ -109,7 +109,9 @@ export default function Single(){
         </div>
         </div>
         </div>
-        <img src={image_link} className='w-[100%] mt-[0.5cm]' />
+        {image_link ? (<img src={image_link} className='mt-[0.5cm] w-[100%]' />) : 
+        (<video src={video_link} control="controls" className='mt-[0.5cm] w-[100%]' />)
+        }
       <div className='text-[#445] mt-[1cm]'>{description}</div>
       <div className='mt-[0.5cm]'>
         <button className='px-[0.3cm] py-[0.1cm] bg-[#225] text-[80%] rounded-md text-[#fff] m-[0.2cm]' style={{boxShadow:"1px 1px 2px 2px #ccc"}}>Tags:</button>

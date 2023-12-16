@@ -113,7 +113,7 @@ export default function ContributorsDashboard(){
             <span className='lg:text-[200%] md:text-[180%] text-[150%] font-[500] ml-[0.5cm] text-[#fff]'>Welcome {full_name}!</span>
         </div>
         
-        <div data-aos="slide-down" className='mt-[2cm] lg:mx-[20%] md:mx-[10%]' style={{border:"3px solid #aaf", transition:"0.5s ease-in-out"}}>
+        <div data-aos="zoom-in" className='mt-[2cm] lg:mx-[20%] md:mx-[10%]' style={{border:"3px solid #aaf", transition:"0.5s ease-in-out"}}>
         <div className='text-[150%] font-[500] text-[#fff] bg-[#000] px-[0.2cm] text-center py-[0.4cm]'>
             <img src="images/logo2.png" width="50" className='m-[auto]' />
         </div>

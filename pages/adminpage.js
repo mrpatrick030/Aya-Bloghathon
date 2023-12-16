@@ -281,7 +281,7 @@ export default function AdminDashboard(){
         </div>)
         }
         
-        <div data-aos="slide-down" className='mt-[1cm] lg:mx-[10%] md:mx-[5%]' style={{border:"3px solid #ccf", transition:"0.5s ease-in-out"}}>
+        <div data-aos="zoom-in" className='mt-[1cm] lg:mx-[10%] md:mx-[5%]' style={{border:"3px solid #ccf", transition:"0.5s ease-in-out"}}>
         <div className='text-[150%] font-[500] text-[#fff] bg-[#000] px-[0.2cm] text-center py-[0.4cm]'>
             <img src="images/logo2.png" width="50" className='m-[auto]' />
         </div>
