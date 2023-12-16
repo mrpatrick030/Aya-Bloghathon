@@ -50,7 +50,7 @@ const handleSubmitforMemberLogin = async (e) => {
    <link rel="shortcut icon" href="/favicon.ico" />
    </Head>
    <div className='memberslogin' style={{backgroundImage:"url(images/earth.jpg)"}}>
-    <div className='py-[0.3cm] px-[1cm] bg-[#fff]' style={{boxShadow:"-1px 1px 1px 1px #ddf", zIndex:"9999"}}>
+    <div className='py-[0.3cm] px-[1cm] bg-[#fff]' style={{boxShadow:"-1px 1px 1px 1px #dde", zIndex:"9999"}}>
      <Link href="/">
       <img src="images/back.png" width="50" style={{display:"inline-block"}}/>
       <span className='ml-[0.5cm] lg:text-[180%] md:text-[180%] text-[150%] font-[500] text-[#446]'>Back</span>
@@ -58,7 +58,7 @@ const handleSubmitforMemberLogin = async (e) => {
     </div>
 
 
-        <div data-aos="slide-left" className='lg:mx-[25%] md:mx-[10%] mx-[5%] bg-[#fff] my-[4cm]' style={{border:"3px solid #aaf", transition:"0.5s ease-in-out"}}>
+        <div data-aos="fade-in" className='lg:mx-[25%] md:mx-[10%] mx-[5%] bg-[#fff] my-[4cm]' style={{border:"3px solid #aaf", transition:"0.5s ease-in-out"}}>
         <div className='text-[150%] font-[500] text-[#fff] bg-[#000] text-center py-[0.4cm]'>
             <img src="images/unlock.png" width="30" style={{display:"inline-block"}}/>
             <span className='ml-[0.3cm]'>Login as a Contributor</span>

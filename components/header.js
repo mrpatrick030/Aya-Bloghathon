@@ -21,7 +21,7 @@ export default function Header(){
     return (
       <div>
 
-      <div className='text-center py-[0.3cm] px-[1cm] bg-[#fff] headerdivforlarge' style={{boxShadow:"-1px 1px 1px 1px #ddf", zIndex:"9999"}}>
+      <div className='text-center py-[0.3cm] px-[1cm] bg-[#fff] headerdivforlarge' style={{boxShadow:"-1px 1px 1px 1px #dde", zIndex:"9999"}}>
       <img src="images/logo2.png" width="50" style={{display:"inline-block"}}/>
       <Link href="/"><button className='ml-[1cm] menuitems'>Home</button></Link>
       <Link href="/contact"><button className='ml-[1cm] menuitems'>Contact</button></Link>

@@ -26,10 +26,10 @@ export default function Sidebar () {
    
 
     return (
-        <div data-aos="zoom-out" style={{transition:"0.5s ease-in-out"}} className='lg:pt-[1.2cm] md:pt-[1.2cm]'>
+        <div data-aos="zoom-in" style={{transition:"0.5s ease-in-out"}} className='lg:pt-[1.2cm] md:pt-[1.2cm]'>
 
 
-        <div className='bg-[#fff] p-[0.5cm] pb-[1.5cm] rounded-md mb-[1cm]' style={{boxShadow:"1px 1px 2px 2px #ccd"}}>
+        <div className='bg-[#fff] p-[0.5cm] pb-[1.5cm] rounded-md mb-[1cm]' style={{boxShadow:"1px 1px 2px 2px #dde"}}>
         <div className='text-center' style={{display:"block"}}>
         <span className='text-[150%] font-[500] text-[#445]'>Tags</span>
         <img src="images/minus2.png" width="50" className='ml-[0.3cm]' style={{display:"inline-block"}} />
@@ -50,7 +50,7 @@ export default function Sidebar () {
         </div>
         </div>
 
-    <div className='socialdiv bg-[#fff] p-[0.5cm] pb-[1.5cm] rounded-md mb-[1cm]' style={{boxShadow:"1px 1px 2px 2px #ccd"}}>
+    <div className='socialdiv bg-[#fff] p-[0.5cm] pb-[1.5cm] rounded-md mb-[1cm]' style={{boxShadow:"1px 1px 2px 2px #dde"}}>
       <div className='text-center' style={{display:"block"}}>
         <span className='text-[150%] font-[500] text-[#445]'>Social</span>
         <img src="images/minus2.png" width="50" className='ml-[0.3cm]' style={{display:"inline-block"}} />
@@ -63,7 +63,7 @@ export default function Sidebar () {
         </div>
     </div>
 
-    <div className='bg-[#fff] p-[0.5cm] pb-[1.5cm] rounded-md mb-[1cm]' style={{boxShadow:"1px 1px 2px 2px #ccd"}}>
+    <div className='bg-[#fff] p-[0.5cm] pb-[1.5cm] rounded-md mb-[1cm]' style={{boxShadow:"1px 1px 2px 2px #dde"}}>
       <div className='text-center' style={{display:"block"}}>
         <span className='text-[150%] font-[500] text-[#445]'>Trending</span>
         <img src="images/minus2.png" width="50" className='ml-[0.3cm]' style={{display:"inline-block"}} />

@@ -62,5 +62,5 @@ button{transition: 0.3s ease-in-out;}
   }
 
   @media screen and (max-width:1007px) {
-    .adminregister, .adminlogin{background-position-x: 50%;}  
+    .adminregister, .adminlogin{background-position-x: 60%;}  
   }

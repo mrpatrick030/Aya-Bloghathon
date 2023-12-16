@@ -91,14 +91,14 @@ export default function Mainbar () {
     return (
         <div>
           <div className='pb-[0.5cm]' style={{position:"sticky"}}>
-          <span className='bg-[#ddf] px-[0.5cm] py-[0.2cm] rounded-full'>
+          <span className='bg-[#fff] px-[0.5cm] py-[0.2cm] rounded-full'>
         <form style={{display:"inline-block"}}>
-        <input type="text" placeholder="Search blog...." onChange={(e) => setSearchQuery(e.target.value)} className='bg-[#ddf] w-[4cm] placeholder-[#300] text-[90%] outline-none' /><img src="images/search.png" width="20" onClick={(e) => {e.preventDefault(); handleSearch(searchQuery)}} className='ml-[0.2cm] cursor-pointer' style={{display:"inline-block"}}/>
+        <input type="text" placeholder="Search blog...." onChange={(e) => setSearchQuery(e.target.value)} className='bg-[#fff] w-[4cm] placeholder-[#300] text-[90%] outline-none' /><img src="images/search.png" width="20" onClick={(e) => {e.preventDefault(); handleSearch(searchQuery)}} className='ml-[0.2cm] cursor-pointer' style={{display:"inline-block"}}/>
         </form>
         </span>
           </div>
       {searchResults.length > 0 ? searchResults.map((posts) => (
-      <div data-aos="slide-up" key={posts.id} className='bg-[#fff] p-[0.5cm] pb-[1.5cm] rounded-md mb-[1.5cm]' style={{boxShadow:"1px 1px 2px 2px #ccd", transition:"0.5s ease-in-out"}}>
+      <div data-aos="slide-up" key={posts.id} className='bg-[#fff] p-[0.5cm] pb-[1.5cm] rounded-md mb-[1.5cm]' style={{boxShadow:"1px 1px 2px 2px #dde", transition:"0.5s ease-in-out"}}>
       <div className='grid lg:grid-cols-3 grid-cols-1 gap-8'>
         <div className='grid-cols-1'>
         <img src={posts.image_link} className='rounded-md max-h-[7cm] w-[100%]' />
@@ -132,7 +132,7 @@ export default function Mainbar () {
     ))
        :   
       approvedPosts.map((posts) => (
-      <div data-aos="slide-up" key={posts.id} className='bg-[#fff] p-[0.5cm] pb-[1.5cm] rounded-md mb-[1.5cm]' style={{boxShadow:"1px 1px 2px 2px #ccd", transition:"0.5s ease-in-out"}}>
+      <div data-aos="slide-up" key={posts.id} className='bg-[#fff] p-[0.5cm] pb-[1.5cm] rounded-md mb-[1.5cm]' style={{boxShadow:"1px 1px 2px 2px #dde", transition:"0.5s ease-in-out"}}>
       <div className='grid lg:grid-cols-3 grid-cols-1 gap-8'>
         <div className='grid-cols-1'>
         <img src={posts.image_link} className='rounded-md max-h-[7cm] w-[100%]' />
