@@ -181,7 +181,7 @@ export default function Mainbar () {
     </div>
     ))}
 
-    <div>
+    <div className='mb-[0.5cm]'>
         {Array.from({ length: Math.ceil(approvedPosts.length / postsPerPage) }, (_, index) => (
           <button className='bg-[#225] rounded-md px-[0.3cm] py-[0.1cm] mx-[0.2cm] text-[#fff]' key={index} onClick={() => paginate(index + 1)}>
             {index + 1}
